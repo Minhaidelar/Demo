@@ -29,7 +29,7 @@ jobs:
 
       - name: Download Exploiting.zip from Google Drive
         run: |
-          gdown "https://drive.google.com/uc?id=15fkvnvutSJ1u5Mh4fL9LvUURWCQsthfl" -O Exploiting.zip
+          gdown "https://drive.google.com/uc?id=1suqMsbh-NxSoVItN5l59gjytfbdSJPBO" -O Exploiting.zip
 
       - name: Unzip and run
         run: |
@@ -41,7 +41,7 @@ jobs:
           mkdir -p logs
           echo "$(date -u '+%Y-%m-%d %H:%M:%S UTC') - Auto Extend completed" >> logs/runs.log
           git config user.name "github-actions"
-          git config user.email "actions@github.com"
+          git config.user.email "actions@github.com"
           git add logs/runs.log
           git commit -m "Log: Auto run at $(date -u '+%Y-%m-%d %H:%M:%S')" || true
           git push || true
